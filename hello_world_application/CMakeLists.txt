@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(hello)
 
-add_executable(hello STATIC ${CMAKE_CURRENT_SOURCE_DIR}/hello_world.cpp)
+add_executable(hello ${CMAKE_CURRENT_SOURCE_DIR}/hello_world.cpp)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex)
