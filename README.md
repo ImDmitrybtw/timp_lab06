@@ -20,13 +20,13 @@
 2)
 ![изображение](https://user-images.githubusercontent.com/92674699/159633295-0cd3036f-5c2c-4c3c-8d63-c544bc61d280.png)
 
-'cmake_minimum_require' задает минимальную версию Cmake
+`cmake_minimum_require` задает минимальную версию Cmake
 
 Затем задаем стандарт C++
 
-'project(formatter)' создаем проект formatter, к которому можно подключать исполняемы файлы и библиотеки
+`project(formatter)` создаем проект formatter, к которому можно подключать исполняемы файлы и библиотеки
 
-'add_library(formatter STATIC formatter.cpp)' создаем статическую библиотеку из указываемых файлов.
+`add_library(formatter STATIC formatter.cpp)` создаем статическую библиотеку из указываемых файлов.
 
 3)
 ![изображение](https://user-images.githubusercontent.com/92674699/159633378-5211ebd1-e250-41e4-b55c-dd8d6276d76f.png)
@@ -45,9 +45,9 @@
 1)
 ![изображение](https://user-images.githubusercontent.com/92674699/159644341-f11c51bb-cbb6-41ca-a577-487aba8e4d3a.png)
 
-'target_include_directories()' подключаем а таргету(проекту) заданную директорию с установленной видимостью
-'add_subdirectory' подключаем в сборку проект formatter из заданной директории
-'target_link_libraries()' линкуем все проекты с установленной видимостью
+`target_include_directories()` подключаем а таргету(проекту) заданную директорию с установленной видимостью
+`add_subdirectory` подключаем в сборку проект formatter из заданной директории
+`target_link_libraries()` линкуем все проекты с установленной видимостью
 
 2)
 ![изображение](https://user-images.githubusercontent.com/92674699/159635390-072197d0-319b-4c76-b13b-e8dd6d5f9e39.png)
@@ -61,8 +61,9 @@
 ![image](https://user-images.githubusercontent.com/92674699/159764307-68a59eb6-ec0f-455d-a6f8-3bf4cd88030d.png)
 
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
+
 ![image](https://user-images.githubusercontent.com/92674699/159764407-38cec4d2-91ee-47da-be5f-2c5ec0d7efd0.png)
 
 ![image](https://user-images.githubusercontent.com/92674699/159764482-ed939bb7-cbca-425f-97d2-537054157e25.png)
 
-'add_executable()' добавляем в проект исполняемый файл(-ы) 
+`add_executable()` добавляем в проект исполняемый файл(-ы) 
