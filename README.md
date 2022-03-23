@@ -20,6 +20,14 @@
 2)
 ![изображение](https://user-images.githubusercontent.com/92674699/159633295-0cd3036f-5c2c-4c3c-8d63-c544bc61d280.png)
 
+cmake_minimum_required указывает минимальную версию Cmake
+
+set(CMAKE_CXX_STANDARD 11),set(CMAKE_CXX_STANDARD_REQUIRED ON) устанавливают значения стандартных переменных в Cmake(в данном случае CMAKE_CXX_STANDARD и CMAKE_CXX_STANDARD_REQUIRED)
+
+project(formatter) создает проект formatter, к которому можно подключать исполняемы файлы и библиотеки
+
+add_library(formatter STATIC formatter.cpp) создает статическую библиотеку из указываемых файлов.
+
 3)
 ![изображение](https://user-images.githubusercontent.com/92674699/159633378-5211ebd1-e250-41e4-b55c-dd8d6276d76f.png)
 
@@ -35,8 +43,7 @@
 *formatter_ex*, которая в свою очередь использует библиотеку *formatter*.
 
 1)
-![изображение](https://user-images.githubusercontent.com/92674699/159634348-20d547cb-95c2-4a0e-be3f-3a490df935a3.png)
-
+![изображение](https://user-images.githubusercontent.com/92674699/159644341-f11c51bb-cbb6-41ca-a577-487aba8e4d3a.png)
 
 2)
 ![изображение](https://user-images.githubusercontent.com/92674699/159635390-072197d0-319b-4c76-b13b-e8dd6d5f9e39.png)
