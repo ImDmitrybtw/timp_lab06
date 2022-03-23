@@ -58,7 +58,8 @@
 Чтобы продемонстрировать как работать с библиотекой *formatter_ex*,
 вам необходимо создать два `CMakeList.txt` для двух простых приложений:
 * *hello_world*, которое использует библиотеку *formatter_ex*;
-![image](https://user-images.githubusercontent.com/92674699/159764307-68a59eb6-ec0f-455d-a6f8-3bf4cd88030d.png)
+
+![изображение](https://user-images.githubusercontent.com/92674699/159767488-7392d4f6-ff50-406e-951e-826b69ef68df.png)
 
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
 
