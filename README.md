@@ -26,7 +26,7 @@
 
 `project(formatter)` создаем проект formatter, к которому можно подключать исполняемы файлы и библиотеки
 
-`add_library(formatter STATIC formatter.cpp)` создаем статическую библиотеку из указываемых файлов.
+`add_library(formatter STATIC formatter.cpp)` создаем статическую библиотеку из данных файлов.
 
 3)
 ![изображение](https://user-images.githubusercontent.com/92674699/159633378-5211ebd1-e250-41e4-b55c-dd8d6276d76f.png)
