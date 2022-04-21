@@ -21,3 +21,22 @@ target_link_libraries(solver
 	PUBLIC formatter_ex
 	PUBLIC solver_lib
 )
+
+install(TARGETS solver DESTINATION bin)
+
+set(CPACK_PACKAGE_FILE_NAME "Solver")
+set(CPACK_SOURCE_GENERATOR "TGZ; ZIP")
+if(CPACK_GENERATOR_DEB)
+	set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Dmitry")
+	set(CPACK_GENERATOR "DEB")
+endif()
+if(CPACK_GENERATOR_RPM)
+	set(CPACK_GENERATOR "RPM")
+endif()
+if(CPACK_GENERATOR_WIX)
+	set(CPACK_GENERATOR "WIX")
+endif()
+if(CPACK_GENERATOR_DMG)
+	set(CPACK_GENERATOR "DMG") #DragNDrop
+endif()
+include(CPack)
