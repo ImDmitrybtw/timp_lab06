@@ -1,0 +1,31 @@
+name: DEB Release
+
+on:
+  push:
+    tags:
+      - 'deb_*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        
+      - name: build solver_application
+        run: |
+          cd solver_application
+          cmake -DCPACK_GENERATOR_DEB=ON -B ./_build
+          cd _build
+          make package
+          make package_source
+          cd ..
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
