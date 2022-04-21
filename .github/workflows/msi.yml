@@ -18,9 +18,7 @@ jobs:
           cd solver_application
           cmake -DCPACK_GENERATOR_MSI=ON -B ./_build2
           cd _build2
-          make package
-          make package_source
-          cd ..
+          cpack -C CPackConfig.cmake -G "WIX"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
