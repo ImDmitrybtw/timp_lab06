@@ -16,7 +16,6 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib solver_lib)
 
-
 target_link_libraries(solver
 	PUBLIC formatter_ex
 	PUBLIC solver_lib
