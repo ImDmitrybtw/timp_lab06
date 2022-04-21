@@ -16,8 +16,8 @@ jobs:
       - name: build solver_application
         run: |
           cd solver_application
-          cmake -DCPACK_GENERATOR_DEB=ON -B ./_build
-          cd _build
+          cmake -DCPACK_GENERATOR_DEB=ON -B ./_build2
+          cd _build2
           make package
           make package_source
           cd ..
@@ -36,6 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: solver_application/_build/solver-0.1.1-Linux.deb
-          asset_name: solver.deb
+          asset_path: solver_application/_build2/Solver.deb
+          asset_name: Solver.deb
           asset_content_type: application/deb
