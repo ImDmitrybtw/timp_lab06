@@ -3,11 +3,11 @@ name: DMG Release
 on:
   push:
     tags:
-      - 'deb_*'
+      - 'dmg_*'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     
     steps:
       - name: checkout
